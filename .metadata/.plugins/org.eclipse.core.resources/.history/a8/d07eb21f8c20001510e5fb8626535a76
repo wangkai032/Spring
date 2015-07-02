@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="TaipeiCityBean" class="com.gis.beans.CityBean">
+		<constructor-arg>
+			<value>Taipei</value>
+		</constructor-arg>
+	</bean>
+	
+	
+	<bean id="NewTaipeiCityBean" class="com.gis.beans.CityBean">
+		<constructor-arg>
+			<value>New Taipei City</value>
+		</constructor-arg>
+	</bean>
+	
+		<bean id="Tina" class="com.gis.beans.CityBean">
+		<constructor-arg>
+			<value>New Taipei City</value>
+		</constructor-arg>
+	</bean>
+	
+	
+	<bean id="AreaBean" class="com.gis.beans.AreaBean">
+		<constructor-arg>
+			<list>
+				<ref bean="TaipeiCityBean"/>
+				<ref bean="NewTaipeiCityBean"/>
+				<ref bean="Tina"/>
+			</list>
+		</constructor-arg>
+	</bean>
+</beans>

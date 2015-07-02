@@ -1,0 +1,14 @@
+package com.gis.beans;
+
+public class HelloBean {
+	
+	private String _msg;
+	
+	public void HelloWorld(){
+		System.out.println(_msg);
+	}
+	
+	public HelloBean(String s){
+		_msg = s;
+	}
+}
