@@ -12,9 +12,9 @@ public class MeanTest1 {
 	public static void main(String[] args) {
 		Resource rs = new ClassPathResource("beans.config.xml");
 		BeanFactory factory = new XmlBeanFactory(rs);
-		LogBean bean = (LogBean) factory.getBean("LogBean");
-		bean.Log("HelloBean");
-		
+		HelloBean bean = (HelloBean) factory.getBean("Date");
+//		bean.Log("HelloBean");
+		System.out.println(bean.toString());
 
 	}
 

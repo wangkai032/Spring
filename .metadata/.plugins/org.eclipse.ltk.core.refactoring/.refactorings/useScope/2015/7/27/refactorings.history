@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;toMessage.java&apos; to &apos;useAnnotation/src/com.gis.beans&apos;&#x0D;&#x0A;- Original project: &apos;useScope&apos;&#x0D;&#x0A;- Destination element: &apos;useAnnotation/src/com.gis.beans&apos;&#x0D;&#x0A;- Original element: &apos;com.gis.beans.toMessage.java&apos;" description="Copy compilation unit" destination="=useAnnotation/src&lt;com.gis.beans" element1="/src&lt;com.gis.beans{toMessage.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1435894404870" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,26 @@
+package com.gis.beans;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.PropertiesBeanDefinitionReader;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
+public class MainTest1 {
+	public static void main(String[] args) {
+		BeanDefinitionRegistry reg = new DefaultListableBeanFactory();
+		PropertiesBeanDefinitionReader reader = new PropertiesBeanDefinitionReader(reg);
+		reader.loadBeanDefinitions(new ClassPathResource("beans.properties"));
+		//讀取Beans 組態檔
+//		Resource rs = new ClassPathResource("beans.config.xml");
+		//建立Bean Factory, 這是用來產生Bean物件實體的工廠
+//		BeanFactory factory = new XmlBeanFactory(rs);
+		BeanFactory factory = (BeanFactory) reg;
+		//以id向Factory要求一個Bean
+		HelloBean bean = (HelloBean) factory.getBean("HelloBean");
+		bean.HelloWorld();
+
+	}
+}

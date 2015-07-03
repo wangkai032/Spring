@@ -1,0 +1,27 @@
+package com.gis.beans;
+
+import org.springframework.stereotype.Component;
+
+@Component("toMessage")
+@Scope("prototype")
+public class toMessage {
+	
+	private String _msg;
+	
+	public String getMsg(){
+		return _msg;
+	}
+	
+	public void Message(){
+		System.out.println(_msg);
+	}
+	
+	
+	public void setMsg(String value){
+		_msg = value;
+	}
+	
+	public toMessage(){
+		
+	}
+}

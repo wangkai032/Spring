@@ -1,0 +1,13 @@
+package com.gis.beans;
+
+import java.util.Locale;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Maintest {
+	public static void main(String[] args){
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.config.xml");
+		System.out.println(context.getMessage("HelloMsg", null, Locale.en));
+	}
+}

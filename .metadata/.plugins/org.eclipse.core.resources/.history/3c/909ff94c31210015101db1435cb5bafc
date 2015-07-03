@@ -1,0 +1,20 @@
+package com.gis.beans;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainTest1 {
+	public static void main(String[] args) {
+		//取得config.xml
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.config.xml");
+		//以ID向ApplicationContext取一個bean
+		toMessage bean = (toMessage) context.getBean("toMessage");
+		bean.setMsg("Hello 1");
+		bean.Message();
+		//使用scope產生新的物件
+		toMessage bean2= (toMessage) context.getBean("toMessage");
+		bean.setMsg("Hello scope ");
+		bean2.Message();
+
+	}
+}

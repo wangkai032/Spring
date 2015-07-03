@@ -1,0 +1,15 @@
+package com.gis.beans;
+
+public class HelloBean {
+	private String _msg;
+	
+	public void HelloWorld(){
+		System.out.println(_msg);
+	}
+	
+	public static HellowBean InitWithDate(){
+		HelloBean b = new HelloBean();
+		b.setMsg(new Date().toString());
+		return b;
+	}
+}

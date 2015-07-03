@@ -1,0 +1,5 @@
+package com.gis.benas;
+
+public class HelloBean {
+
+}
